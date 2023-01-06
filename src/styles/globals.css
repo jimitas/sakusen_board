@@ -5,5 +5,7 @@
 /*# sourceMappingURL=globals.css.map */
 
 @layer components {
-
+  .title{
+    color:red;
+  }
 }
