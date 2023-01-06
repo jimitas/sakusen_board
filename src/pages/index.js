@@ -16,7 +16,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>地味に助かる　作戦ボード</h1>
+        <div className="flex">
+          <div className="text-4xl">地味に助かる　作戦ボード</div>
+          <select name="" id=""></select>
+        </div>
       </main>
     </>
   );
