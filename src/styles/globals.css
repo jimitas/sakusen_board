@@ -5,7 +5,9 @@
 /*# sourceMappingURL=globals.css.map */
 
 @layer components {
-  .title{
-    color:red;
+
+  .select {
+    @apply text-base m-1 md:text-3xl text-black rounded-lg text-center border border-blue-500 cursor-pointer;
   }
+
 }
