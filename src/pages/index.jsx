@@ -74,7 +74,7 @@ export default function Home() {
             {ARROW_PINK.map((item) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                  <img key={ARROW_PINK} className="arrow" src={`/arrow_${item}.png`} alt="" />
+                  <img key={ARROW_PINK} className="arrow" src={`./arrow_${item}.png`} alt="" />
                 </Draggable>
               );
             })}
@@ -83,7 +83,7 @@ export default function Home() {
           <section>
             <div>
               <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                <img className="ball" src="/ball.png" alt="" />
+                <img className="ball" src="./ball.png" alt="" />
               </Draggable>
             </div>
             <button
@@ -102,7 +102,7 @@ export default function Home() {
             {ARROW_BLUE.map((item) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                  <img key={ARROW_BLUE} className="arrow" src={`/arrow_${item}.png`} alt="" />
+                  <img key={ARROW_BLUE} className="arrow" src={`./arrow_${item}.png`} alt="" />
                 </Draggable>
               );
             })}
