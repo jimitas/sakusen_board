@@ -27,12 +27,12 @@ export default function Home() {
     <>
       <body style={{backgroundColor:"#008833"}} className="text-white h-screen select-none">
         <header style={{ height: "10vh", borderBottom: "1px white solid" }} className="p-3 flex justify-center">
-          <div className="text-4xl">地味に助かる　作戦ボード</div>
+          <div className="h1">地味に助かる　作戦ボード</div>
           <div>
             <select className="select mx-3 -mt-1">
               {SAKUSEN.map((item) => {
                 return (
-                  <option key={item} className="cursor-pointer" value={item}>
+                  <option key={SAKUSEN} className="cursor-pointer" value={item}>
                     {item}
                   </option>
                 );
@@ -40,7 +40,7 @@ export default function Home() {
             </select>
           </div>
 
-          <div className="ml-2 text-xs">
+          <div className="ml-2 h2">
             スクリーンショットをとって、
             <br />
             ロイロノートなどに残すこともできるよ。
@@ -62,7 +62,7 @@ export default function Home() {
             {NUM.map((num) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                  <div key={num} className="red cursor-pointer" value={num}>
+                  <div key={NUM} className="red cursor-pointer" value={num}>
                     <div className={isShow === true ? "rotate-90" : null}>{num}</div>
                   </div>
                 </Draggable>
@@ -75,7 +75,7 @@ export default function Home() {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
                   <img
-                    key={item}
+                    key={ARROW_PINK}
                     style={{ width: "50px", height: "50px", cursor: "pointer" }}
                     src={`/arrow_${item}.png`}
                     alt=""
@@ -108,7 +108,7 @@ export default function Home() {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
                   <img
-                    key={item}
+                    key={ARROW_BLUE}
                     style={{ width: "50px", height: "50px", cursor: "pointer" }}
                     src={`/arrow_${item}.png`}
                     alt=""
