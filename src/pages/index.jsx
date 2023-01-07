@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <body className="text-white bg-green-700 h-screen select-none">
+      <body style={{backgroundColor:"#008833"}} className="text-white h-screen select-none">
         <header style={{ height: "10vh", borderBottom: "1px white solid" }} className="p-3 flex justify-center">
           <div className="text-4xl">地味に助かる　作戦ボード</div>
           <div>
@@ -90,7 +90,7 @@ export default function Home() {
               <Draggable defaultPosition={{ x: 0, y: 0 }}>
                 <img style={{ width: "50px", height: "50px", cursor: "pointer" }} src="/ball.png" alt="" />
               </Draggable>
-              <button
+              <button style={{width:"80px"}}
                 className="btn mt-3"
                 onClick={() => {
                   setIsShow((isShow) => {
