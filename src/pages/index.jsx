@@ -25,11 +25,16 @@ export default function Home() {
 
   return (
     <>
-      <body style={{ backgroundColor: "#000" }} className="text-white h-screen select-none">
-        <header style={{ height: "10vh", borderBottom: "1px white solid" }} className="p-3 flex justify-center">
-          <div className="h1">地味に助かる　作戦ボード</div>
+      <body style={{ color: "#fff", backgroundColor: "#000" }} className="text-white h-screen select-none">
+        <header
+          style={{ height: "10vh", borderBottom: "1px white solid", display: "flex" }}
+          className="p-3 flex justify-center"
+        >
+          <div style={{ fontSize: "2vw",margin:"1vw" }} className="ml-2">
+            地味に助かる　作戦ボード
+          </div>
           <div>
-            <select className="select mx-3 -mt-1">
+            <select style={{ fontSize: "2vw",margin:"1vw" }} className="select mx-3 -mt-1">
               {SAKUSEN.map((item) => {
                 return (
                   <option key={SAKUSEN} className="cursor-pointer" value={item}>
@@ -40,7 +45,7 @@ export default function Home() {
             </select>
           </div>
 
-          <div className="ml-2 h2">
+          <div style={{ fontSize: "1vw",margin:"1vw" }} className="ml-2">
             スクリーンショットをとって、
             <br />
             ロイロノートなどに残すこともできるよ。
@@ -48,7 +53,7 @@ export default function Home() {
         </header>
 
         <main className="main">
-          <section className="couat mx-auto mt-5">
+          <section style={{ margin: "2vw auto 2vw auto" }} className="couat mx-auto mt-5">
             <div className="absolute left_goal"></div>
             <div className="absolute left_line"></div>
             <div className="absolute mid_line"></div>
@@ -57,20 +62,20 @@ export default function Home() {
           </section>
         </main>
 
-        <fotter className="flex p-2">
-          <section className="flex flex-wrap mx-auto">
+        <fotter style={{ display: "flex", flexWrap: "wrap", margin: "2vw auto 2vw auto" }} className="flex p-2">
+          <section className="place">
             {NUM.map((num) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
                   <div key={NUM} className="red cursor-pointer" value={num}>
-                    <div className={isShow === true ? "rotate-90" : null}>{num}</div>
+                    <div style={isShow === true ? { transform: "rotate(90deg)" } : null}>{num}</div>
                   </div>
                 </Draggable>
               );
             })}
           </section>
 
-          <section className="place flex flex-wrap">
+          <section className="place">
             {ARROW_PINK.map((item) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
@@ -80,7 +85,7 @@ export default function Home() {
             })}
           </section>
 
-          <section>
+          <section style={{ width: `min(10vw,100px)` }}>
             <div>
               <Draggable defaultPosition={{ x: 0, y: 0 }}>
                 <img className="ball" src="./ball.png" alt="" />
@@ -88,6 +93,7 @@ export default function Home() {
             </div>
             <button
               className="btn"
+              style={{ backgroundColor: "blue", color: "white", fontWeight: "600",cursor:"pointer" }}
               onClick={() => {
                 setIsShow((isShow) => {
                   return !isShow;
@@ -98,7 +104,7 @@ export default function Home() {
             </button>
           </section>
 
-          <section className="place flex flex-wrap">
+          <section className="place">
             {ARROW_BLUE.map((item) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
@@ -108,12 +114,12 @@ export default function Home() {
             })}
           </section>
 
-          <section className="flex flex-wrap mx-auto">
+          <section className="place">
             {NUM.map((num) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }} className="">
                   <div key={num} className="blue cursor-pointer" value={num}>
-                    <div className={isShow === true ? "-rotate-90" : null}>{num}</div>
+                    <div style={isShow === true ? { transform: "rotate(-90deg)" } : null}>{num}</div>
                   </div>
                 </Draggable>
               );
