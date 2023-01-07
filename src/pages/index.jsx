@@ -1,5 +1,5 @@
 import Draggable from "react-draggable";
-
+import { useState } from "react";
 export default function Home() {
   const NUM = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   const SAKUSEN = [
@@ -19,6 +19,8 @@ export default function Home() {
     "作戦B",
     "作戦C",
   ];
+  const [isShow, setIsShow] = useState(false);
+
   return (
     <>
       <body className="text-white bg-yellow-900 h-screen select-none">
@@ -35,10 +37,15 @@ export default function Home() {
               })}
             </select>
           </div>
-          <div className="pt-3">スクリーンショットをとって、ロイロノートで編集すると役立つかも。</div>
+
+          <div className="ml-2 text-xs">
+            スクリーンショットをとって、
+            <br />
+            ロイロノートなどに残すこともできるよ。
+          </div>
         </header>
 
-        <main style={{ height: "70vh" }}>
+        <main style={{ height: "45vw" }}>
           <section className="couat mx-auto mt-5">
             <div className="absolute left_goal"></div>
             <div className="absolute left_line"></div>
@@ -47,13 +54,14 @@ export default function Home() {
             <div className="absolute right_goal"></div>
           </section>
         </main>
-        <fotter style={{ height: "10vh" }} className="flex">
+
+        <fotter className="flex">
           <section style={{ width: "260px" }} className="flex flex-wrap mx-auto">
             {NUM.map((num) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
                   <div key={num} className="red cursor-pointer" value={num}>
-                    <div className="rotate-90">{num}</div>
+                    <div className={isShow === true ? "rotate-90" : null}>{num}</div>
                   </div>
                 </Draggable>
               );
@@ -61,8 +69,18 @@ export default function Home() {
           </section>
           <div>
             <Draggable defaultPosition={{ x: 0, y: 0 }}>
-              <img style={{ width: "50px", height: "50px", cursor: "pointer" }} src="/ball.png" alt="" />
+              <img style={{ width: "50px", height: "50px",cursor: "pointer" }} src="/ball.png" alt="" />
             </Draggable>
+            <button
+            className="btn mt-3"
+            onClick={() => {
+              setIsShow((isShow) => {
+                return !isShow;
+              });
+            }}
+          >
+            {isShow ? "戻す" : "回転"}
+          </button>
           </div>
 
           <section style={{ width: "260px" }} className="flex  flex-wrap mx-auto">
@@ -70,7 +88,7 @@ export default function Home() {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }} className="">
                   <div key={num} className="blue cursor-pointer" value={num}>
-                    <div className="-rotate-90">{num}</div>
+                    <div className={isShow === true ? "-rotate-90" : null}>{num}</div>
                   </div>
                 </Draggable>
               );

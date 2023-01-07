@@ -6,15 +6,15 @@
 
 @layer components {
   .couat {
-    width: 60vw;
-    height: 30vw;
+    width: 80vw;
+    height: 40vw;
     border: 5px solid white;
     position: relative;
   }
   .left_goal {
     position: absolute;
     width: 5vw;
-    height: 10vw;
+    height: 20vw;
     right: -5vw;
     top: calc(10vw - 5px);
     background-color: #e50011;
@@ -24,7 +24,7 @@
   .right_goal {
     position: absolute;
     width: 5vw;
-    height: 10vw;
+    height: 20vw;
     left: -5vw;
     top: calc(10vw - 5px);
     background-color: #0064b3;
@@ -37,14 +37,14 @@
     position: absolute;
     border-left: 5px solid white;
     width: 5px;
-    height: calc(30vw - 5px);
+    height: calc(40vw - 5px);
   }
 
   .left_line {
     left: 5vw;
   }
   .mid_line {
-    left: 30vw;
+    left: 40vw;
   }
   .right_line {
     right: 5vw;
@@ -70,5 +70,22 @@
   }
   .blue {
     background-color: #0064b3;
+  }
+
+  .btn,
+  .btnNext {
+    @apply text-xs mx-1 px-2 md:px-4 md:text-xl bg-white hover:bg-blue-500 text-blue-700 font-semibold hover:text-white  border border-blue-500 hover:border-transparent rounded;
+    background-color: white;
+    -webkit-box-shadow: 2px 2px 2px 0 rgba(128, 128, 128, 0.8);
+    box-shadow: 2px 2px 2px 0 rgba(128, 128, 128, 0.8);
+  }
+
+  .btn:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    /*下に動く*/
+    border-bottom: none;
+    /*線を消す*/
   }
 }
