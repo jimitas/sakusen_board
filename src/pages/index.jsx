@@ -76,7 +76,7 @@ export default function Home() {
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
                   <img
                     key={ARROW_PINK}
-                    style={{ width: "50px", height: "50px", cursor: "pointer" }}
+                    style={{ width: "5vw", height: "5vw", cursor: "pointer" }}
                     src={`/arrow_${item}.png`}
                     alt=""
                   />
@@ -88,7 +88,7 @@ export default function Home() {
           <section>
             <div>
               <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                <img style={{ width: "50px", height: "50px", cursor: "pointer" }} src="/ball.png" alt="" />
+                <img style={{ width: "5vw", height: "5vw", cursor: "pointer" }} src="/ball.png" alt="" />
               </Draggable>
               <button style={{width:"80px"}}
                 className="btn mt-3"
@@ -109,7 +109,7 @@ export default function Home() {
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
                   <img
                     key={ARROW_BLUE}
-                    style={{ width: "50px", height: "50px", cursor: "pointer" }}
+                    style={{ width: "5vw", height: "5vw", cursor: "pointer" }}
                     src={`/arrow_${item}.png`}
                     alt=""
                   />
