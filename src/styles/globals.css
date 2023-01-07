@@ -50,7 +50,7 @@
     right: 5vw;
   }
   .select {
-    @apply text-base m-1 md:text-3xl text-black rounded-lg text-center border border-blue-500 cursor-pointer;
+    @apply text-base m-1 h-10 md:text-base text-black rounded-lg text-center border border-blue-500 cursor-pointer;
   }
 
   .red,
