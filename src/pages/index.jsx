@@ -51,8 +51,8 @@ export default function Home() {
           <section style={{ width: "260px" }} className="flex flex-wrap mx-auto">
             {NUM.map((num) => {
               return (
-                <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                  <div key={num} className="red cursor-pointer" value={num}>
+                <Draggable defaultPosition={{ x: 0, y: 0 }} className="rotate-90">
+                  <div key={num} className="red  cursor-pointer" value={num}>
                     {num}
                   </div>
                 </Draggable>
@@ -65,12 +65,14 @@ export default function Home() {
             </Draggable>
           </div>
 
-          <section style={{ width: "260px" }} className="flex flex-wrap mx-auto">
+          <section style={{ width: "260px" }} className="flex  flex-wrap mx-auto">
             {NUM.map((num) => {
               return (
-                <div key={num} className="blue cursor-pointer" value={num}>
-                  {num}
-                </div>
+                <Draggable defaultPosition={{ x: 0, y: 0 }} className="">
+                  <div key={num} className="blue cursor-pointer" value={num}>
+                    {num}
+                  </div>
+                </Draggable>
               );
             })}
           </section>
