@@ -15,8 +15,8 @@
     position: absolute;
     width: 5vw;
     height: 10vw;
-    right:-5vw;
-    top:calc(10vw - 5px);
+    right: -5vw;
+    top: calc(10vw - 5px);
     background-color: #e50011;
     border: 5px solid white;
   }
@@ -25,8 +25,8 @@
     position: absolute;
     width: 5vw;
     height: 10vw;
-    left:-5vw;
-    top:calc(10vw - 5px);
+    left: -5vw;
+    top: calc(10vw - 5px);
     background-color: #0064b3;
     border: 5px solid white;
   }
