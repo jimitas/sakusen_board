@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <body style={{backgroundColor:"#008833"}} className="text-white h-screen select-none">
+      <body style={{ backgroundColor: "#000" }} className="text-white h-screen select-none">
         <header style={{ height: "10vh", borderBottom: "1px white solid" }} className="p-3 flex justify-center">
           <div className="h1">地味に助かる　作戦ボード</div>
           <div>
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
         </header>
 
-        <main style={{ height: "45vw" }}>
+        <main className="main">
           <section className="couat mx-auto mt-5">
             <div className="absolute left_goal"></div>
             <div className="absolute left_line"></div>
@@ -57,8 +57,8 @@ export default function Home() {
           </section>
         </main>
 
-        <fotter className="flex">
-          <section style={{ width: "260px" }} className="flex flex-wrap mx-auto">
+        <fotter className="flex p-2">
+          <section className="flex flex-wrap mx-auto">
             {NUM.map((num) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
@@ -70,16 +70,11 @@ export default function Home() {
             })}
           </section>
 
-          <section style={{ width: "260px" }} className="flex flex-wrap">
+          <section className="place flex flex-wrap">
             {ARROW_PINK.map((item) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                  <img
-                    key={ARROW_PINK}
-                    style={{ width: "5vw", height: "5vw", cursor: "pointer" }}
-                    src={`/arrow_${item}.png`}
-                    alt=""
-                  />
+                  <img key={ARROW_PINK} className="arrow" src={`/arrow_${item}.png`} alt="" />
                 </Draggable>
               );
             })}
@@ -88,37 +83,32 @@ export default function Home() {
           <section>
             <div>
               <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                <img style={{ width: "5vw", height: "5vw", cursor: "pointer" }} src="/ball.png" alt="" />
+                <img className="ball" src="/ball.png" alt="" />
               </Draggable>
-              <button style={{width:"80px"}}
-                className="btn mt-3"
-                onClick={() => {
-                  setIsShow((isShow) => {
-                    return !isShow;
-                  });
-                }}
-              >
-                {isShow ? "戻す" : "回転"}
-              </button>
             </div>
+            <button
+              className="btn"
+              onClick={() => {
+                setIsShow((isShow) => {
+                  return !isShow;
+                });
+              }}
+            >
+              {isShow ? "戻す" : "回転"}
+            </button>
           </section>
 
-          <section style={{ width: "260px" }} className="flex flex-wrap">
+          <section className="place flex flex-wrap">
             {ARROW_BLUE.map((item) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }}>
-                  <img
-                    key={ARROW_BLUE}
-                    style={{ width: "5vw", height: "5vw", cursor: "pointer" }}
-                    src={`/arrow_${item}.png`}
-                    alt=""
-                  />
+                  <img key={ARROW_BLUE} className="arrow" src={`/arrow_${item}.png`} alt="" />
                 </Draggable>
               );
             })}
           </section>
 
-          <section style={{ width: "260px" }} className="flex  flex-wrap mx-auto">
+          <section className="flex flex-wrap mx-auto">
             {NUM.map((num) => {
               return (
                 <Draggable defaultPosition={{ x: 0, y: 0 }} className="">
