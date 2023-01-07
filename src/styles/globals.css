@@ -5,9 +5,70 @@
 /*# sourceMappingURL=globals.css.map */
 
 @layer components {
+  .couat {
+    width: 60vw;
+    height: 30vw;
+    border: 5px solid white;
+    position: relative;
+  }
+  .left_goal {
+    position: absolute;
+    width: 5vw;
+    height: 10vw;
+    right:-5vw;
+    top:calc(10vw - 5px);
+    background-color: #e50011;
+    border: 5px solid white;
+  }
 
+  .right_goal {
+    position: absolute;
+    width: 5vw;
+    height: 10vw;
+    left:-5vw;
+    top:calc(10vw - 5px);
+    background-color: #0064b3;
+    border: 5px solid white;
+  }
+
+  .left_line,
+  .mid_line,
+  .right_line {
+    position: absolute;
+    border-left: 5px solid white;
+    width: 5px;
+    height: calc(30vw - 5px);
+  }
+
+  .left_line {
+    left: 5vw;
+  }
+  .mid_line {
+    left: 30vw;
+  }
+  .right_line {
+    right: 5vw;
+  }
   .select {
     @apply text-base m-1 md:text-3xl text-black rounded-lg text-center border border-blue-500 cursor-pointer;
   }
 
+  .red,
+  .blue {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    border: 1px white solid;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: "pointer";
+  }
+  .red {
+    background-color: #e50011;
+  }
+  .blue {
+    background-color: #0064b3;
+  }
 }
