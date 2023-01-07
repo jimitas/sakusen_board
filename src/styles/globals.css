@@ -8,6 +8,9 @@
   .h1{
     font-size: 2vw;
   }
+  .h2{
+    font-size: .5vw;
+  }
   .arrow {
     width: 5vw;
     height: 5vw;
