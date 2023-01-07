@@ -12,6 +12,7 @@
     width: 5vw;
     height: 5vw;
   }
+
   .couat {
     width: 80vw;
     height: 40vw;
@@ -58,7 +59,7 @@
     right: 5vw;
   }
   .select {
-    @apply text-base m-1 h-12 md:text-2xl font-bold text-black rounded-lg text-center border border-blue-500 cursor-pointer;
+    @apply text-base m-1 h-6 md:h-12 text-base md:text-2xl font-bold text-black rounded-lg text-center border border-blue-500 cursor-pointer;
   }
 
   .red,
