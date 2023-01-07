@@ -5,10 +5,15 @@
 /*# sourceMappingURL=globals.css.map */
 
 @layer components {
+  .arrow {
+    width: 50px;
+    height: 50px;
+  }
   .couat {
     width: 80vw;
     height: 40vw;
     border: 5px solid white;
+    background-color: #ffdc00;
     position: relative;
   }
   .left_goal {
@@ -50,7 +55,7 @@
     right: 5vw;
   }
   .select {
-    @apply text-base m-1 h-10 md:text-base text-black rounded-lg text-center border border-blue-500 cursor-pointer;
+    @apply text-base m-1 h-12 md:text-2xl font-bold text-black rounded-lg text-center border border-blue-500 cursor-pointer;
   }
 
   .red,
