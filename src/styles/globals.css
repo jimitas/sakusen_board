@@ -16,7 +16,7 @@
     height: min(40vw, 400px);
     margin: 2vw auto 2vw auto;
     border: 5px solid white;
-    background-color: #083;
+    background-color: #6B46C1;
     position: relative;
   }
   
@@ -37,12 +37,12 @@
   }
   .left_goal {
     right: -5vw;
-    background-color: #e50011;
+    background-color: #DC2626;
   }
 
   .right_goal {
     left: -5vw;
-    background-color: #0064b3;
+    background-color: #1D4ED8;
   }
 
   .left_line,
@@ -88,10 +88,10 @@
     margin: 2px;
   }
   .red {
-    background-color: #e50011;
+    background-color: #DC2626;
   }
   .blue {
-    background-color: #0064b3;
+    background-color: #1D4ED8;
   }
 
   .ball {
