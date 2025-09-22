@@ -26,7 +26,7 @@ export const STRATEGY_OPTIONS = [
 export const COLORS = {
   RED: "#DC2626", // 濃い赤 - 野外視認性向上
   BLUE: "#1D4ED8", // 濃い青 - 野外視認性向上
-  FIELD: "#6B46C1", // 濃い紫 - 野外視認性向上&色弱対応（赤・緑色弱にも区別しやすい）
+  FIELD: "#F59E0B", // 薄めのオレンジ - 野外視認性向上&色弱対応（青・赤との区別が明確）
   WHITE: "#fff",
   BLACK: "#000",
 };
