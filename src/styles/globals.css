@@ -16,7 +16,7 @@
     height: min(40vw, 400px);
     margin: 2vw auto 2vw auto;
     border: 5px solid white;
-    background-color: #008833;
+    background-color: #083;
     position: relative;
   }
   
@@ -51,7 +51,7 @@
     position: absolute;
     border-left: 5px solid white;
     width: 5px;
-    height: min(calc(40vw - 5px), 395px);
+    height: min(calc(40vw), 400px);
   }
 
   .left_line {
