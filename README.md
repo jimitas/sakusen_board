@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 地味に助かる　作戦ボード
 
-## Getting Started
+体育の授業で使える作戦ボードをタブレットで使えるようにしたWebアプリケーションです。
 
-First, run the development server:
+## 特徴
+
+- **ドラッグ&ドロップ操作**: プレイヤーやボール、矢印を自由に配置できます
+- **スクリーンショット機能**: 作戦をスクリーンショットで保存し、ロイロノートなどに残すことができます
+- **作戦名選択**: ドラクエ風の作戦名からオリジナル作戦名まで選択可能
+- **回転機能**: チーム視点を変更できる回転ボタン付き
+- **アクセシブルデザイン**: 色弱対応と野外での視認性を考慮した色設計
+
+## 使い方
+
+1. ブラウザでアプリにアクセス
+2. 作戦名をドロップダウンから選択
+3. 赤・青のプレイヤー、矢印、ボールをドラッグして配置
+4. 必要に応じて「回転」ボタンでチーム視点を変更
+5. スクリーンショットを撮ってロイロノートなどに保存
+
+## 技術仕様
+
+- **フレームワーク**: Next.js 13
+- **スタイリング**: Tailwind CSS
+- **ドラッグ機能**: react-draggable
+- **デプロイ**: 静的サイトエクスポート対応
+
+## 開発・ビルド
 
 ```bash
+# 開発サーバー起動
 npm run dev
-# or
-yarn dev
+
+# 本番ビルド
+npm run build
+
+# 静的ファイルエクスポート
+npm run build && npm run export
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 色仕様（アクセシビリティ対応）
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **フィールド**: 薄いオレンジ (#F59E0B) - 色弱対応
+- **赤チーム**: 濃い赤 (#DC2626) - 野外視認性向上
+- **青チーム**: 濃い青 (#1D4ED8) - 野外視認性向上
+- **境界線**: 白 (#fff)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+赤・緑色弱の方にも区別しやすく、野外での使用にも適した色設計になっています。
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## ライセンス
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+MIT License
